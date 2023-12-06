@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= genero.name %> </title>
+    <link rel='stylesheet' href='/css/style.css' />
+
+</head>
+<body>
+    <figure>
+        <img src="/img/music_logo.jpg" alt="Logo Musicando">
+    </figure> 
+       
+    <h1><%= genero.name %> </h1>
+    <br>
+    <p>Genero: <%= genero.name %> </p>
+    <p>Canciones: <%= genero.generoCancion.titulo %></p>
+
+</body>
+</html>

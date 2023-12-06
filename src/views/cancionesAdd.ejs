@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Cancion</title>
+    <link rel='stylesheet' href='/css/style.css' />
+</head>
+
+<body>
+    <figure>
+        <img src="/img/music_logo.jpg" alt="Logo Musicando">
+      </figure>
+    <h1 class="titulo">Agregar Cancion</h1>
+    <br>
+    <section class="formulario">
+        <form action="/canciones/create" method="POST">
+            <label for="titulo">Titulo </label>
+            <p><input type="text" name="titulo" id="" required/></p>
+            <br>
+            <label for="duracion">Duracion Cancion </label>
+            <p><input type="number" name="duracion" id="" required/> </p>
+            <br>
+            <label for="nombre">Nombre de Artista </label>
+            <p><input type="text" name="nombre" id="" required/></p>
+            <br>
+            <label for="apellido">Apellido de Artista </label>
+            <p><input type="text" name="apellido" id="" required/></p>
+            <br>
+            <label for="nombre_album">Nombre de Album </label>
+            <p><input type="text" name="nombre_album" id="" required/></p>
+            <br>
+            <label for="duracion_album">Duracion de Album </label>
+            <p><input type="number" name="duracion_album" id="" required/></p>
+            <br>
+            <label for="genero">Genero</label>
+            <br>
+            <select name="genero_id">
+                <% generos.forEach(genero=> { %>
+                    <option value="<%= genero.id %>">
+                        <%= genero.name %>
+                    </option>
+                    <% }) %>
+            </select>
+            <br>
+            <br>
+            <p> <button class="botonAgregar" type="submit">Agregar Cancion</button>
+            <br>
+            <br>
+            <a  class="botonVolver" href="/canciones">Listado de Canciones</a></p>
+        </form>
+    </section>
+    
+</body>
+
+</html>

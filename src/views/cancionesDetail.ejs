@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= cancion.titulo %> </title>
+    <link rel='stylesheet' href='/css/style.css' />
+
+</head>
+<body>
+    <figure>
+        <img src="/img/music_logo.jpg" alt="Logo Musicando">
+    </figure>
+    <h1><%= cancion.titulo %> </h1>    
+    <br>
+    <p>ARTISTA: <%= cancion.artistaCancion.nombre + ' ' + cancion.artistaCancion.apellido %></p>
+    <p>DURACION: <%= cancion.duracion + ' seg' %> </p>
+    <p>GENERO: <%= cancion.generoCancion.name %></p>
+    <p>ALBUM: <%= cancion.albumCancion.nombre %></p>    
+
+</body>
+</html>

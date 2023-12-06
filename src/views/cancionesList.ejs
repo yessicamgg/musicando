@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de canciones</title>
+    <link rel='stylesheet' href='/css/style.css' />
+
+</head>
+
+<body>
+    <figure>
+        <img src="/img/music_logo.jpg" alt="Logo Musicando">
+    </figure>
+    <h1>LISTADO DE CANCIONES</h1>
+    <br>
+    <a  href="/canciones/add">Agregar Cancion</a></p>
+    <br>
+    <br>
+    <ul>
+        <% for( let i = 0; i < canciones.length; i++ ) { %>
+        <li>
+            <a href="/canciones/detail/<%= canciones[i].id %>"><%= canciones[i].titulo %></a>
+        </li>
+        <% } %>
+
+    </ul>
+</body>
+
+</html>

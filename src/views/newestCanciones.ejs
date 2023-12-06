@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canciones ordenas por fecha</title>
+    <link rel='stylesheet' href='/css/style.css' />
+</head>
+<body>
+    <figure>
+        <img src="/img/music_logo.jpg" alt="Logo Musicando">
+    </figure>
+    <h1>CANCIONES ORDENADAS POR FECHA</h1>
+    <ul>
+        <% for( let i = 0; i < canciones.length; i++ ) { %>
+        <li>
+            <a href="/canciones/detail/<%=canciones[i].id%>"><%= canciones[i].titulo %> </a> <br>
+            <%= 'updated at: ' + canciones[i].updated_at %> 
+        </li>
+        <% } %>
+        
+    </ul>
+</body>
+</html>
